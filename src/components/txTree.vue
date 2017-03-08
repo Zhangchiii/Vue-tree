@@ -55,9 +55,7 @@
     data(){
       return {
         open: false,
-        hasChild: true,
         selectedNodeName: '',
-        active: false
       }
     },
     computed: {
@@ -67,8 +65,7 @@
     },
     methods: {
       toggle: function (name) {
-        this.active = true;
-        if (this.hasChild) {
+        if (this.hasChildren) {
           this.open = !this.open;
         }
         this.selectedNodeName = name;
